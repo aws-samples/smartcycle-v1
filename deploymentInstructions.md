@@ -91,7 +91,7 @@ git clone aws-smartcycle.git
  cd ~/aws-smartcycle; ll
 
 The llcommand should show a directory contents, similar to the following:
- ![](RackMultipart20200709-4-1s1c7lq_html_d5ab460898505091.gif)
+ ![](./myMediaFolder/media/image2.jpeg)
 
 **At this point, make sure your ANT+ USB receiver is plugged into a USB port on your DeepLens.** For the front-facing DeepLens device, run the install-front.sh shell script using _sudo_ to deploy additional customizations on the DeepLens. The installation script will Python module dependencies and also configure the ANT+ USB settings. This may take several minutes to complete.
 
@@ -109,7 +109,7 @@ The Smartcycle project uses its own customized copy of the deeplens-object-detec
 
 Go to the _AWS Console \&gt; Lambda \&gt; Functions_ and select the &quot;deeplens-object-detection&quot; from the list of existing Lambdas.
 
-![](RackMultipart20200709-4-1s1c7lq_html_9021d2705b7df683.gif)
+![](./myMediaFolder/media/image3.jpeg)
 
 Make sure you are on the most recent version of the Lambda function so you can edit it. Select the field _Code entry type_ _&quot;Edit code inline&quot;_option _–_ you should see the file &quot;greenrassHelloWorld.py&quot; loaded inside the inline text editor.
 
@@ -119,29 +119,29 @@ Note, for the front facing DeepLens device, it is important to use the &quot;fro
 
 Next, publish a new version of the Lambda function we just modified. Go to the _Actions menu in the Lambda console \&gt; __Publish new version_. Call it &quot;Version 2&quot; in the description field and click _Publish__._
 
-![](RackMultipart20200709-4-1s1c7lq_html_59efde9239647952.gif)
+![](./myMediaFolder/media/image4.jpeg)
 
 You will then need to create an Alias for the Lambda function. Aliases are a reference we can use when deploying our Lambda functions and acts as a placeholder, allowing us to decouple the Lambda version from the GreenGrass Group deployment, which helps minimize the changes to our Group configuration. Go to _Actions \&gt; Create Alias._ In the _Name_ field, enter the name &quot;PRODUCTION&quot; (or whatever name you will recognize). For the _Version_ field, choose the version of the Lambda you just created, in our case _version 2_ – **note you MUST use a specific Lambda version number and not the &quot;$LATEST&quot; option to work with GreenGrass**. Click _Create_ to save the new Alias.
 
-![](RackMultipart20200709-4-1s1c7lq_html_4f9b6ec6778c7711.gif)
+![](./myMediaFolder/media/image5.jpeg)
 
 ##### Deploy audio-service Lambda function
 
 We will now create a new Lambda function that is responsible for playing audio alerts when hazards are detected. Go back to the Lambda home page and click on _Create function_.
 
-![](RackMultipart20200709-4-1s1c7lq_html_94320cfc52a65168.gif)
+![](./myMediaFolder/media/image6.jpeg)
 
 On the Create function page, choose _Author from scratch_, then enter a _Function name_ such as &quot;audio-service&quot;. For the function _Runtime_, choose &quot;Python 2.7&quot;. Under _Permission \&gt; Choose_ or create an execution role, select _Use an existing role_, then find an _Existing role_ called &quot;AWSDeepLensLambdaRole&quot; and choose that option. Finally, click _Create Function_ at the bottom corner of the page.
 
 Once you have created the function, you will be taken the Lambda configuration page. In the _Designer_ panel (click to expand this panel if necessary), click on the name of your function, for example &quot;audio-service&quot; in the center of the panel – this will expand the _Function code_ panel below.
 
-![](RackMultipart20200709-4-1s1c7lq_html_b5558caf8554c8d4.gif)
+![](./myMediaFolder/media/image7.jpeg)
 
 Under _Function code \&gt; Code entry type_, choose the _Upload a .zip file_ option from the select menu. Then under _Function package_, click the _Upload_ button to launch a dialog window and selectSmartcyclev1/audio/audio-service.zip from your local drive.
 
 For the Runtime field, make sure &quot;Python 2.7&quot; has been selected. For the Handler field, enter &quot;audio-service.lambda\_handler&quot; – this is the Python function that will be called in our audio-service.py Lambda function code when triggered.
 
-![](RackMultipart20200709-4-1s1c7lq_html_f44e91c8e5dd4f2f.gif)
+![](./myMediaFolder/media/image8.jpeg)
 
 Next, _Save_ your changes for the audio-service Lambda function. Once saved, you need to publish your function so you can more easily manage any changes to the Lambda function made later. GreenGrass deployments require that you use a specific Lambda version – you cannot use an intrinsic reference such as &quot;$LATEST&quot;.
 
@@ -169,7 +169,7 @@ Next, click on _&quot;Use existing Lambda&quot;_ and choose the _audio-service_ 
 
 Once you are back on the Lambdas page, click on the _audio-service_ Lambda you just added, then _Edit._ Increase the _Memory limit_ setting to 32MB and increase the _Timeout_ setting to 15 seconds. Finally, Enable _Read access to the /sys directory_ by clicking the Enable radio button. Save your changes to the Lambda configuration by clicking the _Update_ button.
 
-![](RackMultipart20200709-4-1s1c7lq_html_8b58acc16838cf7d.gif)
+![](./myMediaFolder/media/image9.jpeg)
 
 ##### Modify the deeplens-object-detection Lambda for GreenGrass
 
@@ -189,7 +189,7 @@ Next, you need to change the Lambda settings.
 
  Finally, click _Update_ to save your configuration settings.
 
- ![](RackMultipart20200709-4-1s1c7lq_html_32e1bf66a65d7009.gif)
+ ![](./myMediaFolder/media/image10.jpeg)
 
 ##### Configure GreenGrass Group Resources
 
@@ -213,7 +213,7 @@ Group owner file access permissions:select radio button for &quot;Automatically 
 
 Lambda function affiliations:choose select the _&quot;smartcycle-audioaudio-service&quot;_ Lambda function, then the _Read and write access_ permission option.
 
-![](RackMultipart20200709-4-1s1c7lq_html_a4af2e62b04d4cd8.gif) \&lt;insert screenshot here\&gt;
+![](./myMediaFolder/media/image11.jpeg) \&lt;insert screenshot here\&gt;
 
 Resource name:diskcache\_dir
 
@@ -229,7 +229,7 @@ Lambda function affiliations: choose BOTH &quot;deeplens-object-detection&quot; 
 
 \&lt;insert screenshot here\&gt;
 
-![](RackMultipart20200709-4-1s1c7lq_html_a505dd676111e7f6.gif)
+![](./myMediaFolder/media/image12.jpeg)
 
 Resource name: sound\_card\_resource – this resource already exists as part of the default DeepLens setup. However, you need to Edit this resource and give the _audio-service_ and _deeplens-object-detection_ Lambdas access to this resource by creating affiliations for them. Leave all other settings as-is.
 
@@ -241,7 +241,7 @@ Group owner file access permissions: select radio button for &quot;Automatically
 
 Lambda function affiliations: _choose BOTH &quot;deeplens-object-detection&quot; AND &quot;smartcycle-audio&quot; Lambda functionsSelect another Lambda function to attach_, then choose the audio-service Lambda with Read and write access, save the resource settings by clicking Update at the bottom of the page.
 
-![](RackMultipart20200709-4-1s1c7lq_html_dd1b6ad5a5149bf1.gif) \&lt;insert screenshot here\&gt;
+![](./myMediaFolder/media/image13.jpeg) \&lt;insert screenshot here\&gt;
 
 Resource name: sound\_control\_resource – this resource already exists as part of the default DeepLens setup. However, you need to Edit this resource and give the _audio-service_ and deeplens-object-detection Lambdas access to this resource by creating affiliations for them. Leave all other settings as-is.
 
@@ -253,7 +253,7 @@ Group owner file access permissions: select radio button for &quot;Automatically
 
 Lambda function affiliations: _Select another Lambda function to attach_, then choose the audio-service Lambda with Read and write access, save the resource settings by clicking Update at the bottom of the page.choose BOTH &quot;deeplens-object-detection&quot; AND &quot;smartcycle-audio&quot; Lambda functions
 
-![](RackMultipart20200709-4-1s1c7lq_html_b67dddc6a8afa962.gif)
+![](./myMediaFolder/media/image14.jpeg)
 
 **Finally, you will need to add your new version of the &quot;deeplens-object-detection&quot; Lambda to all other pre-existing Resources associated with this GreenGrass Group. Go into all remaining Resource configurations and add the &quot;PRODUCTION&quot; (alias) version of the &quot;deeplens-object-detection&quot; Lambda to the Resource – match the read/write permissions of the other Lambda functions already affiliated with that Resource, otherwise you may run into filesystem permission issues once deployed. You will have to repeat this process several times to correctly associate the new version of the deeplens-object-detection Lambda with each required Resource.**
 
@@ -268,7 +268,7 @@ You will add a GreenGrass topic Subscription that looks at only the &quot;smartc
 3. _Under Select a target_, choose _Lambdas \&gt; audio-service._ Then click the _Next_ button.
 4. A Topic filter text field will appear, copy/paste in &quot;smartcycle/object-detection&quot; as the topic filter value, then click the _Next_ button.
 
-![](RackMultipart20200709-4-1s1c7lq_html_37d8e7dd1e8fed19.gif)
+![](./myMediaFolder/media/image15.jpeg)
 
 #### Deploy Your GreenGrass Group Changes
 
@@ -344,17 +344,6 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 ###
 
  sudo systemctl restart greengrassdi
-
-
-###
-
-###
-
-###
-
-###
-
-###
 
 **Front DeepLens**
 
