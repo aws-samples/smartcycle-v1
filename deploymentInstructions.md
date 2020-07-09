@@ -1,6 +1,6 @@
 ## Bike Setup
 
-## ![](./myMediaFolder/media/image1.tiff)
+## ![](./myMediaFolder/media/image1.jpeg)
 _Figure1: SmartCycle bike setup_
 
 ## Overview
