@@ -1,0 +1,2 @@
+-i https://pypi.org/simple
+diskcache==3.1.1

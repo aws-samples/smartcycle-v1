@@ -1,1 +1,1 @@
-SmartCycle Version 1.0
+# aws-smartcycle
