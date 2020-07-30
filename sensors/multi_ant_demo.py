@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
 """
     Code based on:
         https://github.com/mvillalba/python-ant/blob/develop/demos/ant.core/03-basicchannel.py
