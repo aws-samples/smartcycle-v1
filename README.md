@@ -86,9 +86,9 @@ First, assuming you have a keyboard/mouse/monitor connected to your DeepLens, lo
 
 From the _aws\_cam_ user directory on the DeepLens, clone the &#39;aws-smartcycle&#39; project from GitHub; once the clone download completes, change into the &#39;aws-smartcycle&#39; directory:
 
-git clone aws-smartcycle.git
+git clone https://github.com/aws-samples/smartcycle-v1/
 
- cd ~/aws-smartcycle; ll
+ cd ~/smartcycle-v1; ll
 
 The llcommand should show a directory contents, similar to the following:
  ![](./myMediaFolder/media/image2.jpeg)
@@ -101,7 +101,7 @@ sudo ./install-front.sh
 
 You now will need to clone the Smartcycle project assets onto your local workstation using Git. You will be deploying and configuring some of these assets manually, such as the audio-service Lambda function. From your workstation command line (or GUI) Git client, clone the Smartcycle repository:
 
-git clone ssh://git.amazon.com/pkg/Smartcyclev1
+git clone ssh://github.com/aws-samples/smartcycle-v1
 
 ##### Deploy New Version of the deeplens-object-detection Lambda
 
@@ -111,7 +111,7 @@ Go to the _AWS Console \&gt; Lambda \&gt; Functions_ and select the &quot;deeple
 
 ![](./myMediaFolder/media/image3.jpeg)
 
-Make sure you are on the most recent version of the Lambda function so you can edit it. Select the field _Code entry type_ _&quot;Edit code inline&quot;_option _–_ you should see the file &quot;greenrassHelloWorld.py&quot; loaded inside the inline text editor.
+Make sure you are on the most recent version of the Lambda function so you can edit it. Select the field _Code entry type_ _&quot;Edit code inline&quot;_option _–_ you should see the file &quot;greengrassObjectDetector.py&quot; loaded inside the inline text editor.
 
 Next, go to your local copy of the cloned Smartcycle project and open the fileobject-detection/front-view/greengrassObjectDetector.py in your local text editor. Then select all, copy and paste the contents of the custom greengrassObjectDetector.py into the inline Lambda editor, overwriting the existing deeplens-object-detection code. Keep all of the other Python module dependencies already configured for the original Lambda. _Save_ your Lambda changes in the inline editor.
 
