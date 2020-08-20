@@ -12,8 +12,6 @@ The Smartcycle project was implemented as a set of Lambda functions and scripts,
 3. Sensor service
 4. Analytics application
 
-Finally, we provide demo videos you can play to test out your Smartcycle setup once complete.
-
 ## Prerequisites
 
 You can elect to implement the full Smartcycle implementation which mounts on a bicycle or choose a minimalistic implementation based on just one DeepLens device. We described the required hardware and software components for both implementation approaches below.
@@ -21,7 +19,7 @@ You can elect to implement the full Smartcycle implementation which mounts on a 
 ### Required Hardware - Full Smartcycle Setup
 
 
-- 2 HDMI-compatible monitors and cables – at least one larger (25-inch or greater), high-resolution monitors are recommended for the best detection of objects in demo videos. These monitors are for displaying our pre-recorded street scenes the DeepLens devices will watch for road hazards.
+- 2 HDMI-compatible monitors and cables – at least one larger (25-inch or greater), high-resolution monitors are recommended for the best detection of objects in any demo videos or can stream from the camera directly. These monitors are for displaying our pre-recorded street scenes the DeepLens devices will watch for road hazards.
 
 - A bicycle – since this is a proof-of-concept for demonstration purposes, we mounted the hardware listed below to a stationary bicycle (more specifically, a road bike attached to a bike stand).
 
@@ -29,7 +27,7 @@ You can elect to implement the full Smartcycle implementation which mounts on a 
 
 To register your DeepLens device(s), please follow these instructions: [https://amzn.to/2TEb9rg](https://amzn.to/2TEb9rg)
 
-_ **For each** _ DeepLens device you use, you will need:
+For each DeepLens device you use, you will need:
 
 - An Internet connection for your DeepLens devices (Wifi or USB Ethernet adapter)
 - An USB hub – we used: StarTech 4-port USB 3.0 mini hub: [https://amzn.to/2LfoXIG](https://amzn.to/2LfoXIG)
@@ -64,7 +62,7 @@ On DeepLens devices:
 - Recommend installing Vim editor on your DeepLens device (for Python color-coded text) via apt-get:
 sudo apt-get install vim
 
-Smartcycle uses Python 2.7.
+Smartcycle uses Python 2.7 (codebase to be migrated to python3)
 
 ### Required Hardware - Minimal Smartcycle Setup
 
@@ -280,19 +278,11 @@ For these changes to take effect, you need to re-deploy the GreenGrass project i
 
 ###
 
-Once the Smartcycle deployment has been successful, you can now run the demo videos to test the hazard detection functionality provided by the deeplens-object-detection Lambda. If you have ANT+ sensors, you can also run the multi\_ant\_demo.py Python script to capture sensor data.
-
-First, you need to download the demo videos (front and rear) to your local workstation or whatever computer you will be demoing from. You can download the videos from their Amazon S3 storage bucket here:
-
-Front: https://aws-smartcycle1.s3.amazonaws.com/demo-front.mp4
-
-Rear: https://aws-smartcycle1.s3.amazonaws.com/demo-back.mp4
+Once the Smartcycle deployment has been successful, you can now run the any demo videos to test the hazard detection functionality provided by the deeplens-object-detection Lambda. If you have ANT+ sensors, you can also run the multi\_ant\_demo.py Python script to capture sensor data.
 
 ### Note that each of these MP4 demo video files is approximately 720MB in size.You now need to download and configure the code artifacts required to run Smartcycle.
 
 Next, log on to your DeepLens and start your ANT+ Python script from a Terminal prompt change into the &quot;sensors&quot; directory and run the following script:First, assuming you have a keyboard/mouse/monitor connected to your DeepLens, login to your DeepLens device to access your Ubuntu desktop. Then launch a Terminal shell prompt. Optionally, you may choose to connect to your DeepLens remotely over SSH instead.
-
-~~Create a directory to clone the Smartcycle project artifacts to your user home directly on the DeepLens. Copy and run the following commands:~~
 
 cd ~/smartcycle-aws/sensors
 
@@ -340,10 +330,8 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 \*Special thanks go to Johanne Bader and his excellent introduction to configuring the Suunto USB receiver for the Raspberry Pi, which helped greatly with the ANT+ sensor code.
 
 [https://www.johannesbader.ch/2014/06/track-your-heartrate-on-raspberry-pi-with-ant/](https://www.johannesbader.ch/2014/06/track-your-heartrate-on-raspberry-pi-with-ant/)
-
 ###
-
- sudo systemctl restart greengrassdi
+ sudo systemctl restart greengrassd
 
 **Front DeepLens**
 
@@ -377,7 +365,8 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 
 Start ant\_multi\_demopy
 
-**Rear DeepLens**
+**Rear DeepLens**   
+Refer same setups as for the front DeepLens
 
 
 ## Security
