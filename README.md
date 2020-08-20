@@ -1,5 +1,8 @@
 ## Bike Setup
-
+<p align="center">
+  <img width="460" height="300" src="./myMediaFolder/media/image1.jpeg">
+  _Figure1: SmartCycle bike setup_
+</p>
 ## ![](./myMediaFolder/media/image1.jpeg)
 _Figure1: SmartCycle bike setup_
 
