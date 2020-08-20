@@ -86,7 +86,7 @@ First, assuming you have a keyboard/mouse/monitor connected to your DeepLens, lo
 
 From the _aws\_cam_ user directory on the DeepLens, clone the &#39;aws-smartcycle&#39; project from GitHub; once the clone download completes, change into the &#39;aws-smartcycle&#39; directory:
 
-git clone https://github.com/aws-samples/smartcycle-v1/
+git clone https://github.com/aws-samples/smartcycle-v1.git
 
  cd ~/smartcycle-v1; ll
 
@@ -101,7 +101,7 @@ sudo ./install-front.sh
 
 You now will need to clone the Smartcycle project assets onto your local workstation using Git. You will be deploying and configuring some of these assets manually, such as the audio-service Lambda function. From your workstation command line (or GUI) Git client, clone the Smartcycle repository:
 
-git clone ssh://github.com/aws-samples/smartcycle-v1
+git clone https://github.com/aws-samples/smartcycle-v1.git
 
 ##### Deploy New Version of the deeplens-object-detection Lambda
 
