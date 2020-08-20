@@ -2,8 +2,6 @@
 # SPDX-License-Identifier: MIT-0
 #!/bin/bash
 
-echo "Hello World!"
-
 apt-get -y install vim
 
 pip install --upgrade pip
@@ -15,7 +13,8 @@ hash curl 2>/dev/null || { echo >&2 "I require Curl but it's not installed.  Abo
 pip2 install -r /home/aws_cam/aws-smartcycle/sensors/requirements.txt;
 pip2 install -r /home/aws_cam/aws-smartcycle/audio/requirements.txt;
 
-curl https://aws-smartcycle1.s3.amazonaws.com/mxnet_deploy_model_algo_1_FP32_FUSED.bin -o /home/aws_cam/aws-smartcycle/object-detection/models/mxnet_deploy_model_algo_1_FP32_FUSED.bin
+# Once the model binary is trained and available, filename mxnet_deploy_model_algo_<>_FP32_FUSED.bin can be copied to /home/aws_cam/aws-smartcycle/<>
+curl <model-binary-filepath;s3 location> -o /home/aws_cam/aws-smartcycle/object-detection/models/mxnet_deploy_model_algo_1_FP32_FUSED.bin
 
 cd ..
 git clone https://github.com/baderj/python-ant.git
