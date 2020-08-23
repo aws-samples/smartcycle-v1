@@ -329,7 +329,7 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 
 **Front DeepLens**
 
-1. Deploy Object-detection Lambda project (deploy the Lambda artifact itself or the default project and then overwrite?....probably the latter case
+1. Deploy Object-detection project, either sample project or custom. [https://aws.amazon.com/getting-started/hands-on/create-deploy-project-deeplens/](Refer link)
 
 
 2. Deploy smartcycle-audio lambda
@@ -345,6 +345,7 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 5. Deploy Analytics application
 
   1. See blog post - creating a rule with DynamoDB action under reference section  
+  ![](./myMediaFolder/media/Picture1.png)
     1. Whenever AWS IoT topic receives the data, it triggers a rule that allows you save the data either to a fully managed NoSQL database such as Amazon DynamoDB or persist in your centralized repository using Amazon S3.   
     2. Example rule query statement: "SELECT metrics.heartrate AS heartrate, metrics.temperature AS temperature, metrics.key1 AS key1, metrics.key2 AS key2, metrics.speed AS speed, metrics.cadence AS cadence FROM '$aws/things/deeplens_mrfWZnY7SdOeuJAy-nAD4w/infer'
 "   
