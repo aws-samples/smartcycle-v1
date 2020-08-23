@@ -5,7 +5,7 @@
 
 ## Overview
 
-The Smartcycle project was implemented as a set of Lambda functions and scripts, along with supporting assets such as the object detection model and MP3 audio files. Additionally, there is a sensor data reporting tool that is deployed and used via the AWS Console. Overall, the Smartcycle project is comprised of 4 major components:
+The Smartcycle project (Art-of-the-Possible) was implemented as a set of Lambda functions and scripts, along with supporting assets such as the object detection model and MP3 audio files. Additionally, there is a sensor data reporting tool that is deployed and used via the AWS Console. Overall, the Smartcycle project is comprised of 4 major components:
 
 1. Object-detection service
 2. Audio alert service
@@ -274,11 +274,11 @@ For these changes to take effect, you need to re-deploy the GreenGrass project i
 
 ###
 
-### Test your Smartcycle deployment Download the Smartcycle Artifacts to the DeepLens Device
+### Test your Smartcycle project - Art-of-the-possible deployment Download the Smartcycle Artifacts to the DeepLens Device.
 
 ###
 
-Once the Smartcycle deployment has been successful, you can now run the any demo videos to test the hazard detection functionality provided by the deeplens-object-detection Lambda. If you have ANT+ sensors, you can also run the multi\_ant\_demo.py Python script to capture sensor data.
+Simulation purpose only. Once the Smartcycle deployment has been successful, you can now run any demo videos to test the hazard detection functionality provided by the deeplens-object-detection Lambda. If you have ANT+ sensors, you can also run the multi\_ant\_demo.py Python script to capture sensor data.
 
 ### Note that each of these MP4 demo video files is approximately 720MB in size.You now need to download and configure the code artifacts required to run Smartcycle.
 
@@ -298,7 +298,7 @@ mplayer -demuxer lavf –lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg
 
 ### From the &#39;src&#39; directory, clone the &#39;smartcycle&#39; project from GitHub; once the clone download completes, change into the &#39;smartcycle&#39; directory:
 
-### git clone https://github.com/simcikdt/aws-smartcycle.git
+### git clone https://github.com/aws-samples/smartcycle-v1.git
 
 cd ./aws-smartcycle; ll
 
