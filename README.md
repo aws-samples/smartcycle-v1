@@ -82,7 +82,7 @@ Once the Object Detection sample project has been successfully deployed to your 
 
 First, assuming you have a keyboard/mouse/monitor connected to your DeepLens, login to your DeepLens device to access your Ubuntu desktop. Then launch a Terminal shell prompt. Optionally, you may choose to connect to your DeepLens remotely over SSH instead.
 
-From the _aws\_cam_ user directory on the DeepLens, clone the &#39;aws-smartcycle&#39; project from GitHub; once the clone download completes, change into the &#39;aws-smartcycle&#39; directory:
+From the _aws\_cam_ user directory on the DeepLens, clone the &#39;smartcycle-v1&#39; project from GitHub; once the clone download completes, change into the &#39;smartcycle-v1&#39; directory:
 
 git clone https://github.com/aws-samples/smartcycle-v1.git
 
@@ -203,9 +203,9 @@ Resource name: smartcycle\_audio\_files
 
 Resource type: Volume
 
-Source path:/home/aws\_cam/src/aws-smartcycle/audio/audio-files
+Source path:/home/aws\_cam/src/smartcycle-v1/audio/audio-files
 
-Destination path:/home/aws\_cam/src/aws-smartcycle/audio/audio-files
+Destination path:/home/aws\_cam/src/smartcycle-v1/audio/audio-files
 
 Group owner file access permissions:select radio button for &quot;Automatically add OS group permissions of the Linux group that owns the resource&quot;
 
@@ -217,9 +217,9 @@ Resource name:diskcache\_dir
 
 Resource type: Volume
 
-Source path: /home/aws\_cam/src/aws-smartcycle/localdb
+Source path: /home/aws\_cam/src/smartcycle-v1/localdb
 
-Destination path: /home/aws\_cam/src/aws-smartcycle/localdb
+Destination path: /home/aws\_cam/src/smartcycle-v1/localdb
 
 Group owner file access permissions: select radio button for &quot;Automatically add OS group permissions of the Linux group that owns the resource&quot;
 
@@ -300,7 +300,7 @@ mplayer -demuxer lavf –lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg
 
 ### git clone https://github.com/aws-samples/smartcycle-v1.git
 
-cd ./aws-smartcycle; ll
+cd ./smartcycle-v1; ll
 
 ### The ll command should show a directory contents similar to the following:
  \&lt;screenshot of smartcycle src directory here\&gt;
@@ -353,7 +353,7 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
   1. See Sarita&#39;s document
 
 1. While Logged into the DeepLens Ubuntu console
-  1. Clone Git aws-smartcycle project locally
+  1. Clone Git smartcycle-v1 project locally
 2. Run install-front.sh shell script to copy files for the FRONT DeepLens
 
     1. Copy/overwrite default object-detection Lambda (front) with custom version (that has sensor overlay and custom model references, etc.)Make sure references to audio files, new object-detection model, diskcache DB are correct
