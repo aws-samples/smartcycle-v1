@@ -329,7 +329,7 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 
 **Front DeepLens**
 
-1. Deploy Object-detection project, either sample project or custom. [https://aws.amazon.com/getting-started/hands-on/create-deploy-project-deeplens/](Refer link)
+1. Deploy Object-detection project, either sample project or custom. [Refer link](https://aws.amazon.com/getting-started/hands-on/create-deploy-project-deeplens/)
 
 
 2. Deploy smartcycle-audio lambda
