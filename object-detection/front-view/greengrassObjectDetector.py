@@ -152,12 +152,12 @@ def greengrass_infinite_infer_run():
             cloud_output = {}
             topk = 30
             #client.publish(topic=iot_topic, payload = str(parsed_inference_results[model_type][0:topk]))
+            # Sample objects - demo purpose only
             req_list =  [2,3,4,6,8]
             # Get the detected objects and probabilities
             for obj in parsed_inference_results[model_type]:#[0:topk]:
                 if obj['label'] >= 18 or obj['label'] not in req_list: #or output_map[obj['label']] != 'person' or  output_map[obj['label']] != 'bicycle' or output_map[obj['label']] != 'tst' or output_map[obj['label']] != 'motorbike' or output_map[obj['label']] != 'traffic light' or output_map[obj['label']] != 'stop sign' or output_map[obj['label']] != 'dog':
                     continue
-                if obj['label'] == 3 and obj['prob'] *100 < 30: continue
                 if obj['prob'] > detection_threshold:
                     #client.publish(topic=iot_topic, payload = str(obj['prob']))
                     #client.publish(topic=iot_topic, payload = str(cloud_output))

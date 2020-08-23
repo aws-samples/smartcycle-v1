@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="519e32b8-aaec-4623-9e47-cf32cba05cd4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/object-detection/front-view/greengrassObjectDetector.py" afterPath="$PROJECT_DIR$/object-detection/front-view/greengrassObjectDetector.py" />
+      <change beforePath="$PROJECT_DIR$/object-detection/rear-view/greengrassObjectDetector.py" afterPath="$PROJECT_DIR$/object-detection/rear-view/greengrassObjectDetector.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -22,6 +23,26 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greengrassObjectDetector.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/object-detection/front-view/greengrassObjectDetector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="154" column="48" lean-forward="false" selection-start-line="154" selection-start-column="48" selection-end-line="154" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greengrassObjectDetector.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object-detection/rear-view/greengrassObjectDetector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="154" column="12" lean-forward="true" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -38,6 +59,7 @@
       <find>nsert screenshot</find>
       <find>later</find>
       <find>sample</find>
+      <find>deploy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -52,6 +74,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/object-detection/rear-view/greengrassObjectDetector.py" />
+        <option value="$PROJECT_DIR$/object-detection/front-view/greengrassObjectDetector.py" />
       </list>
     </option>
   </component>
@@ -87,6 +111,30 @@
             <path>
               <item name="Smartcycle-v1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Smartcycle-v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Smartcycle-v1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Smartcycle-v1" type="462c0819:PsiDirectoryNode" />
+              <item name="object-detection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Smartcycle-v1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Smartcycle-v1" type="462c0819:PsiDirectoryNode" />
+              <item name="object-detection" type="462c0819:PsiDirectoryNode" />
+              <item name="front-view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Smartcycle-v1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Smartcycle-v1" type="462c0819:PsiDirectoryNode" />
+              <item name="object-detection" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Smartcycle-v1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Smartcycle-v1" type="462c0819:PsiDirectoryNode" />
+              <item name="object-detection" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="rear-view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,12 +270,12 @@
       <option name="presentableId" value="Default" />
       <updated>1597949177405</updated>
       <workItem from="1597949182342" duration="1426000" />
-      <workItem from="1598187712374" duration="3981000" />
+      <workItem from="1598187712374" duration="4148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5407000" />
+    <option name="totallyTimeSpent" value="5574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="831" extended-state="0" />
@@ -247,7 +295,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06795422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25107297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -295,6 +343,22 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object-detection/rear-view/greengrassObjectDetector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="154" column="12" lean-forward="true" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object-detection/front-view/greengrassObjectDetector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="154" column="48" lean-forward="false" selection-start-line="154" selection-start-column="48" selection-end-line="154" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
