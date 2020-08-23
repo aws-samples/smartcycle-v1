@@ -211,7 +211,7 @@ Group owner file access permissions:select radio button for &quot;Automatically 
 
 Lambda function affiliations:choose select the _&quot;smartcycle-audioaudio-service&quot;_ Lambda function, then the _Read and write access_ permission option.
 
-![](./myMediaFolder/media/image11.jpeg) \&lt;insert screenshot here\&gt;
+![](./myMediaFolder/media/image11.jpeg) 
 
 Resource name:diskcache\_dir
 
@@ -225,7 +225,6 @@ Group owner file access permissions: select radio button for &quot;Automatically
 
 Lambda function affiliations: choose BOTH &quot;deeplens-object-detection&quot; AND &quot;smartcycle-audio&quot; Lambda functions with &quot;Read-and-Write Access&quot;
 
-\&lt;insert screenshot here\&gt;
 
 ![](./myMediaFolder/media/image12.jpeg)
 
@@ -239,7 +238,7 @@ Group owner file access permissions: select radio button for &quot;Automatically
 
 Lambda function affiliations: _choose BOTH &quot;deeplens-object-detection&quot; AND &quot;smartcycle-audio&quot; Lambda functionsSelect another Lambda function to attach_, then choose the audio-service Lambda with Read and write access, save the resource settings by clicking Update at the bottom of the page.
 
-![](./myMediaFolder/media/image13.jpeg) \&lt;insert screenshot here\&gt;
+![](./myMediaFolder/media/image13.jpeg) 
 
 Resource name: sound\_control\_resource – this resource already exists as part of the default DeepLens setup. However, you need to Edit this resource and give the _audio-service_ and deeplens-object-detection Lambdas access to this resource by creating affiliations for them. Leave all other settings as-is.
 
@@ -294,24 +293,19 @@ From a new Terminal prompt, run the following command:
 
 mplayer -demuxer lavf –lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg
 
-### ~~cd ~; mkdir src; cd src~~
+~~cd ~; mkdir src; cd src~~
 
-### From the &#39;src&#39; directory, clone the &#39;smartcycle&#39; project from GitHub; once the clone download completes, change into the &#39;smartcycle&#39; directory:
+From the &#39;src&#39; directory, clone the &#39;smartcycle&#39; project from GitHub; once the clone download completes, change into the &#39;smartcycle&#39; directory:
 
-### git clone https://github.com/aws-samples/smartcycle-v1.git
-
-cd ./smartcycle-v1; ll
-
-### The ll command should show a directory contents similar to the following:
- \&lt;screenshot of smartcycle src directory here\&gt;
-
-### Run the install-front.sh shell script to
+git clone https://github.com/aws-samples/smartcycle-v1.git
+cd ./smartcycle-v1; ll   
+ The ll command should show a directory contents similar to the following:
+Run the install-front.sh shell script to
 
 ###
 
 ### Next, you will need to overwrite the original Object Detection Lambda function deployed locally on the DeepLens via GreenGrass with the customized version from the Smartcycle project. Run the following commands to make a backup copy of the original .py file, then overwrite it with the version from the Smartcycle project source.
 
-### \&lt;insert screenshot here\&gt;
 
 A window will appear showing the processed video output directly on your DeepLens desktop. Start your demo video at this point. The object detection model works best when demo video monitor takes up the entire camera view. A successful test will render bounding boxes around hazards like stop signs and stop lights as the demo video progresses through the streets, you should see labels for your sensor data, and as each hazard is detected you should hear an audio alert play warning you about the specific hazard detected.
 
@@ -350,14 +344,18 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 
 5. Deploy Analytics application
 
-  1. See Sarita&#39;s document
+  1. See blog post - creating a rule with DynamoDB action under reference section  
+    1. Whenever AWS IoT topic receives the data, it triggers a rule that allows you save the data either to a fully managed NoSQL database such as Amazon DynamoDB or persist in your centralized repository using Amazon S3.   
+    2. Example rule query statement: "SELECT metrics.heartrate AS heartrate, metrics.temperature AS temperature, metrics.key1 AS key1, metrics.key2 AS key2, metrics.speed AS speed, metrics.cadence AS cadence FROM '$aws/things/deeplens_mrfWZnY7SdOeuJAy-nAD4w/infer'
+"   
+    3. Create a rule action, actions are what happens when a rule is triggered.   
+    4. Once the data is available, we can build a serverless Web Application with AWS lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB. Complete tutorial is available at this link.   
+    5. We can also perform data visualization using Amazon QuickSight. Amazon QuickSight is a fast, cloud-powered business intelligence service that makes it easy to deliver insights to everyone in your organization. As a fully managed service, QuickSight lets you easily create and publish interactive dashboards that include ML Insights. Dashboards can then be accessed from any device, and embedded into your applications, portals, and websites
 
 1. While Logged into the DeepLens Ubuntu console
   1. Clone Git smartcycle-v1 project locally
 2. Run install-front.sh shell script to copy files for the FRONT DeepLens
-
     1. Copy/overwrite default object-detection Lambda (front) with custom version (that has sensor overlay and custom model references, etc.)Make sure references to audio files, new object-detection model, diskcache DB are correct
-    2.
   1. Install required Python modules (diskache, audio-player) via Pip (global/standard device deployment)
   2. Make sure references to audio files, new object-detection model, diskcache DB are correct
 
