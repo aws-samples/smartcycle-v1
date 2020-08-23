@@ -344,7 +344,7 @@ Setting up your rear-facing DeepLens is much like setting up the front-facing De
 
 5. Deploy Analytics application
 
-  1. See blog post - creating a rule with DynamoDB action under reference section  
+  1. See [instructions](https://docs.aws.amazon.com/iot/latest/developerguide/iot-ddb-rule.html) - creating a rule with DynamoDB action under reference section  
   ![](./myMediaFolder/media/Picture1.png)
     1. Whenever AWS IoT topic receives the data, it triggers a rule that allows you save the data either to a fully managed NoSQL database such as Amazon DynamoDB or persist in your centralized repository using Amazon S3.   
     2. Example rule query statement: "SELECT metrics.heartrate AS heartrate, metrics.temperature AS temperature, metrics.key1 AS key1, metrics.key2 AS key2, metrics.speed AS speed, metrics.cadence AS cadence FROM '$aws/things/deeplens_mrfWZnY7SdOeuJAy-nAD4w/infer'
